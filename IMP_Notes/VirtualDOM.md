@@ -1,4 +1,4 @@
-# 🧠 React Virtual DOM, Fibre Algorithm, Reconciliation & Hydration — Simplified Notes
+# 🧠 React Virtual DOM, Fibre Algorithm, Reconciliation & Hydration — Notes
 ---
 ## 🔁 What happens when a webpage updates?
 
