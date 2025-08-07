@@ -14,6 +14,16 @@ function App() {
     }
     else{
       // counter = counter + 1;
+      //Interview-Ques
+      // setCounter( (prevCounter) => (prevCounter + 1) );
+      // setCounter( (prevCounter) => (prevCounter+1) );
+      // setCounter( (prevCounter) => (prevCounter+1) );
+      // setCounter( (prevCounter) => (prevCounter+1) );
+      //when you {} it must return anything in arrow function
+      // setCounter( (prevCounter) => {return prevCounter+1} );
+
+      // setCounter(counter + 1);
+      // setCounter(counter + 1);
       setCounter(counter + 1);
       console.log("Clicked! ",counter); 
     }
@@ -43,3 +53,9 @@ function App() {
 }
 
 export default App
+
+/**Notes:
+ * React batches multiple setState calls when they're based on the same value (counter + 1), 
+ * not the latest one. So all 3 setCounter(counter + 1) calls compute the same value 
+ * and effectively result in only one increment, not three.
+ */
