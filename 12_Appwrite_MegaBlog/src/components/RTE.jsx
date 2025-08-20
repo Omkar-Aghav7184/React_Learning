@@ -2,6 +2,31 @@ import React from "react";
 import { Editor } from "@tinymce/tinymce-react";
 import { Controller } from "react-hook-form";
 
+// Core + theme + icons
+import "tinymce/tinymce";
+import "tinymce/icons/default";
+import "tinymce/themes/silver";
+import "tinymce/models/dom";
+
+// Plugins you listed in init
+import "tinymce/plugins/image";
+import "tinymce/plugins/advlist";
+import "tinymce/plugins/autolink";
+import "tinymce/plugins/lists";
+import "tinymce/plugins/link";
+import "tinymce/plugins/charmap";
+import "tinymce/plugins/preview";
+import "tinymce/plugins/searchreplace";
+import "tinymce/plugins/visualblocks";
+import "tinymce/plugins/code";
+import "tinymce/plugins/fullscreen";
+import "tinymce/plugins/insertdatetime";
+import "tinymce/plugins/media";
+import "tinymce/plugins/table";
+import "tinymce/plugins/help";
+import "tinymce/plugins/wordcount";
+import "tinymce/plugins/anchor";
+
 function RTE({ name, control, label, defaultValue = "" }) {
   return (
     <div className="w-full">

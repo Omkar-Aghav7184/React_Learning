@@ -10,7 +10,7 @@ function SignUp() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [error, setError] = useState("");
-  const [register, handleSubmit] = useForm();
+  const {register, handleSubmit} = useForm();
 
   const createAccount = async (data) => {
     setError("");

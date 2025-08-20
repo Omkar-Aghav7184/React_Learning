@@ -4,17 +4,20 @@ import { Container,PostCard } from '../components'
 
 function Home() {
 
-    const [posts,setPosts] = useState();
+    const [posts,setPosts] = useState([]);
 
     useEffect(()=>{
-        dataBaseService.getAllPosts().then((posts)=>{
-            if(posts){
-                setPosts(posts.documents)
+        dataBaseService.getAllPosts().then((res)=>{
+            if(res && res.documents){
+                setPosts(res.documents)
             }
-        })
+            else{
+                setPosts([]);
+            }
+        }).catch(()=> setPosts([]));
     },[])
 
-    if(posts.length===0){
+    if(!posts || posts.length === 0){
         return(
             <div className="w-full py-8 mt-4 text-center">
                 <Container>
@@ -33,11 +36,11 @@ function Home() {
         <div className='w-full py-8'>
             <Container>
                 <div className='flex flex-wrap'>
-                    {posts.map((post)=>{
+                    {posts.map((post)=>(
                         <div key={post.$id} className='p-2 w-1/4'>
                             <PostCard {...post}/>
                         </div>
-                    })}
+                    ))}
                 </div>
             </Container>
         </div>

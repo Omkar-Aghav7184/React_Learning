@@ -11,7 +11,7 @@ export class DataBaseService{
 
     constructor(){
         this.client
-                   .setEndpoint(conf.appWriteURL)
+                   .setEndpoint(conf.appWriteUrl)
                    .setProject(conf.appwriteProjectId);
         this.databases = new Databases(this.client);
     }

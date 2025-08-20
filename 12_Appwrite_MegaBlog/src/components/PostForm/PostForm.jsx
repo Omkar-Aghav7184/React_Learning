@@ -1,5 +1,5 @@
 import React, { useCallback } from "react";
-import { Button, Input, RTE, Select } from "../index";
+import { Button, Input, RTE, SelectBtn } from "../index";
 import fileService from "../../appWrite/file";
 import databaseService from "../../appWrite/database";
 import { useForm } from "react-hook-form";
@@ -123,7 +123,7 @@ function PostForm({ post }) {
             />
           </div>
         )}
-        <Select
+        <SelectBtn
           options={["active", "inactive"]}
           label="Status"
           className="mb-4"

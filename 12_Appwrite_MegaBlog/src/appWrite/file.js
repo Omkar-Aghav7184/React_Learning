@@ -10,7 +10,7 @@ export class FileService{
 
     constructor(){
         this.client
-               .setEndpoint(conf.appWriteURL)
+               .setEndpoint(conf.appWriteUrl)
                .setProject(conf.appwriteProjectId);
         this.storage =  new Storage(this.client);       
     }
